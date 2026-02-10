@@ -222,12 +222,18 @@ header {
     flex-direction: column; /* 上から下に並べる */
     align-items: center;
 }
+.logo-row {
+    display: flex;
+    justify-content: center; /* 横並び中央 */
+    gap: 10px; /* ロゴ間のスペース */
+    margin-bottom: 10px; /* グリッドとの余白 */
+    flex-wrap: wrap; /* スマホでは折り返す */
+}
 
 .logo img {
-    width: 50px; /* ロゴのサイズ */
+    width: 50px; /* ロゴサイズ */
     height: 50px;
     object-fit: contain;
-    margin-bottom: 6px; /* ボックスとの間隔 */
 }
 
 .box {
