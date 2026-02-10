@@ -108,7 +108,7 @@ const tabSelections = {};
 
 const i18n = {
   ja: {
-    title: "RINDO推しランキング",
+    title: "RINDO推しを選ぶ",
     save: "Save Image",
     default: "デフォルト",
     hideLeft: "左バー消滅",
@@ -126,7 +126,7 @@ const i18n = {
     scandoll: "すきゃんどーる",
   },
   en: {
-    title: "Rindo Entertainment Oshis",
+    title: "Rindo Oshi Selector",
     save: "Save Image",
     default: "Default",
     hideLeft: "Hide Left Bar",
