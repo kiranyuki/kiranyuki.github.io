@@ -130,7 +130,7 @@ nav ul li:hover > a {
 
 h1 {
     font-family: 'SDK_JP_WEB', sans-serif; /* 追加したフォントを使用 */
-    text-agn: center;
+    text-align: center;
     margin-bottom: 5px;
 }
 
@@ -210,29 +210,42 @@ header {
 /* ===== GRID LAYOUT ===== */
 #grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 100px;
-    gap: 8px;
-  margin: 20px auto;
+    grid-template-columns: repeat(5, 1fr); /* 5列 */
+    gap: 12px;
+    max-width: 1000px;
+    margin: 20px auto;
+    justify-items: center; /* 中央揃え */
 }
 
-/* headers (logos) */
-#grid .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.item {
+    display: flex;
+    flex-direction: column; /* 上から下に並べる */
+    align-items: center;
 }
 
-/* grid cells */
-#grid .cell {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: #fff;
+.logo img {
+    width: 50px; /* ロゴのサイズ */
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 6px; /* ボックスとの間隔 */
+}
+
+.box {
+    width: 100px; /* ボックスサイズ */
+    aspect-ratio: 1 / 1; /* 正方形に固定 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* images inside grid */
@@ -411,11 +424,13 @@ body.mode-c .something {
         padding: 10px 5px 5px 5px;
     }
     
-    // .cell {
-    //     width: 100%;
-    //     height: auto; /* 高さを自動調整 */
-    //     border-radius: 5px; /* 角を少し丸める */
-    // }
+    /*
+    .cell {
+    width: 100%;
+    height: auto; /* 高さを自動調整 */
+    border-radius: 5px; /* 角を少し丸める */
+    }
+    */
     
     .tabs {
         flex-direction: column; /* タブを縦並びに */
