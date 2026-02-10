@@ -1,7 +1,9 @@
-
+/* ================================== */
+/*          FONT & BODY              */
+/* ================================== */
 @font-face {
-    font-family: 'SDK_JP_WEB'; /* 任意のフォント名 */
-    src: url('font/SDK_JP_WEB.ttf') format('truetype'); /* フォントファイルのパスを指定 */
+    font-family: 'SDK_JP_WEB';
+    src: url('font/SDK_JP_WEB.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,92 +16,65 @@ body {
     padding: 0;
     text-align: center;
 }
-/* ------------------------------------------------------------------------------------------- */
 
-/* sidebarのスタイル */
+/* ================================== */
+/*          SIDEBAR                  */
+/* ================================== */
 .sidebar {
-    background-color: #333; /* 左ペインの背景色 */
-    color: white; /* 左ペインのテキスト色 */
-    width: 250px; /* 左ペインの幅 */
-    height: 100%; /* 高さを100%にする */
-    position: fixed; /* 固定位置にする */
-    top: 0; /* 上からの位置 */
-    left: 0; /* 左からの位置 */
-    z-index: 1000; /* 重なり順を設定 */
-    transition: transform 0.3s ease; /* スライドアニメーション */
-    background: linear-gradient(to bottom, #444, #777); /* グラデーション背景 */
-    border-right: 5px solid #ffcc00; /* ボーダーを追加 */
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    background: linear-gradient(to bottom, #444, #777);
+    border-right: 5px solid #ffcc00;
+    transform: translateX(0);
 }
 
-/* 左ペインが非表示の時のスタイル */
 .sidebar.hidden {
-    transform: translateX(-200px); /* トグルボタンの幅分だけスライド */
-}
-
-/* サイドバーのヘッダーのスタイル */
-.sidebar-header {
-    display: flex; /* フレックスボックスを使用 */
-    justify-content: space-between; /* タイトルとボタンを左右に配置 */
-    align-items: center; /* 垂直方向に中央揃え */
-    padding: 10px; /* パディング */
-    background-color: #444; /* ヘッダーの背景色 */
-    border-bottom: 1px solid #ffc400;
+    transform: translateX(-200px);
 }
 
 .sidebar.active {
-    transform: translateX(0); /* アクティブ状態で表示 */
+    transform: translateX(0);
 }
 
-/* 初期状態で左ペインを表示するためのスタイル */
-.sidebar {
-    transform: translateX(0); /* 左ペインを表示 */
-}
-
-
-.child-nodes {
-    display: none; /* 初期状態で非表示 */
-    list-style-type: none; /* リストのスタイルをなくす */
-    padding-left: 20px; /* インデントを追加 */
-}
-
-.child-nodes.active {
-    display: block; /* アクティブ状態で表示 */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #444;
+    border-bottom: 1px solid #ffc400;
 }
 
 .sidebar-title {
-    font-family: 'SDK_JP_WEB', sans-serif; /* 使用するフォント */
-    font-size: 20px; /* フォントサイズを調整 */
-    color: white; /* テキストカラー */
-    margin-left: 10px; /* 左のマージンを調整 */
-}
-
-/* トグルボタンのスタイル */
-#toggle-button {
-    font-family: 'SDK_JP_WEB', sans-serif; /* トグルボタンにも同じフォントを適用 */
-    border: 2px solid #ffffff; /* ボーダーを追加 */
-    background-color: #444; /* デフォルトを灰色に */
-    border-radius: 5px;
-    padding: 5px 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
+    font-family: 'SDK_JP_WEB', sans-serif;
+    font-size: 20px;
     color: white;
-    cursor: pointer;
-    font-size: 15px;
-    height: 35px;
     margin-left: 10px;
-}
-
-/* ホバー時におしゃれな黄色に */
-#toggle-button:hover {
-    background-color: #ffcc00; /* ホバー時の黄色 */
 }
 
 .parent-node {
     padding: 10px;
     margin-bottom: 5px;
     cursor: pointer;
+    display: block;
     z-index: 1001;
-    display: block; /* 要素をブロック表示にする */
+}
+
+.child-nodes {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.child-nodes.active {
+    display: block;
 }
 
 nav ul {
@@ -116,20 +91,40 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
-/* 子ノードのホバー効果を追加 */
+
 nav ul li .child-nodes li:hover {
-    background-color: rgba(255, 204, 0, 0.3); /* 子ノードにホバー時の背景色を追加 */
+    background-color: rgba(255, 204, 0, 0.3);
 }
 
-/* 親ノードのホバー効果を無効にする */
 nav ul li:hover > a {
-    background-color: transparent; /* 親ノードのホバー時に背景色を透明に */
+    background-color: transparent;
 }
 
-/* ------------------------------------------------------------------------------------------- */
+/* Toggle button */
+#toggle-button {
+    font-family: 'SDK_JP_WEB', sans-serif;
+    border: 2px solid #ffffff;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    height: 35px;
+    margin-left: 10px;
+}
 
+#toggle-button:hover {
+    background-color: #ffcc00;
+}
+
+/* ================================== */
+/*          HEADER & TABS            */
+/* ================================== */
 h1 {
-    font-family: 'SDK_JP_WEB', sans-serif; /* 追加したフォントを使用 */
+    font-family: 'SDK_JP_WEB', sans-serif;
     text-align: center;
     margin-bottom: 5px;
 }
@@ -147,13 +142,16 @@ h1 {
     margin: 0 5px;
     background-color: #4a90e2;
     color: white;
-    border: 1px solid #4a90e2; /* ボーダーをタブと同じ色にする */
+    border: 1px solid #4a90e2;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s, color 0.3s; /* ホバー効果に遷移を追加 */
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* ================================== */
+/*          GRID & CELLS             */
+/* ================================== */
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -165,91 +163,66 @@ h1 {
     max-width: 700px;
 }
 
-header {
-    padding: 5px;
-    text-align: center;
+/* Item container stacks logo above box */
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* space between logo and box */
 }
 
-.header img {
-    width: 50px; /* 画像のサイズを調整 */
+/* Logo above the box */
+.item .logo img {
+    width: 50px;
     height: 50px;
     object-fit: contain;
 }
 
-/* タイトルとボタンのスタイル */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
+/* The box itself */
 .cell {
-    aspect-ratio: 1 / 1;
     width: 100px;
-    position: relative;
+    aspect-ratio: 1 / 1;
     border: 1px solid #ddd;
-    background-color: #ffffff;
-    overflow: hidden;
-    cursor: pointer;
     border-radius: 8px;
+    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.cell {
-    display: flex;
-    flex-direction: column; /* stack elements vertically */
     align-items: center;
-    justify-content: flex-start; /* start from top */
-    padding: 5px;
 }
 
-.cell .logo img {
-    width: 50px; /* adjust as needed */
-    height: 50px;
-    object-fit: contain;
-    margin-bottom: 5px; /* spacing below logo */
-    position: static; /* reset absolute */
-}
-
-/* ===== GRID LAYOUT ===== */
+/* For larger grid */
 #grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 100px;  /* fixed height for all boxes */
+    grid-auto-rows: 100px;
     gap: 12px;
     max-width: 1000px;
     margin: 20px auto;
     justify-items: center;
+    background-color: transparent;
+    overflow: hidden;
 }
 
-.item {
-    display: flex;
-    flex-direction: column; /* 上から下に並べる */
-    align-items: center;
-}
-
+/* Logo row for multiple logos */
 .logo-row {
     display: flex;
-    justify-content: center; /* 横並び中央 */
-    gap: 10px; /* ロゴ間のスペース */
-    margin-bottom: 10px; /* グリッドとの余白 */
-    flex-wrap: wrap; /* スマホでは折り返す */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .logo img {
-    width: 50px; /* ロゴサイズ */
+    width: 50px;
     height: 50px;
     object-fit: contain;
 }
 
+/* Box styling for other uses */
 .box {
-    width: 100px; /* ボックスサイズ */
-    aspect-ratio: 1 / 1; /* 正方形に固定 */
+    width: 100px;
+    aspect-ratio: 1 / 1;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
@@ -265,27 +238,30 @@ header {
     object-fit: cover;
 }
 
-/* images inside grid */
+/* Images inside grids */
 #grid img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
+/* ================================== */
+/*          IMAGE LIST               */
+/* ================================== */
 .image-list {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    justify-content: flex-start; /* 画像を左寄せにする */
+    justify-content: flex-start;
 }
 
 .image-list img {
-    width: 100px; /* 画像の幅を固定 */
-    height: 100px; /* 画像の高さを固定 */
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     cursor: pointer;
-    border-radius: 4px; /* 角丸を追加 */
-    border: 2px solid transparent; /* デフォルトのボーダーを透明に */
+    border-radius: 4px;
+    border: 2px solid transparent;
 }
 
 .image-container {
@@ -313,22 +289,20 @@ header {
     max-height: 100%;
 }
 
-#grid {
-    background-color: transparent; /* transparent */
-    overflow: hidden; /* オーバーフローを隠す */
-}
-
+/* ================================== */
+/*          TABS STYLING             */
+/* ================================== */
 .tab-wrap {
     display: flex;
     flex-wrap: wrap;
-    width: 720px; /* 上部の表（grid）の幅に合わせる */
-    margin: 5px auto; /* 中央寄せ */
+    width: 720px;
+    margin: 5px auto;
 }
 
 .tab-container {
-    width: 50%; /* または上部の表と同じ具体的な幅を指定 */
-    display: flex; /* タブを横並びにする */
-    overflow: hidden; /* 内容がはみ出さないように */
+    width: 50%;
+    display: flex;
+    overflow: hidden;
 }
 
 .tab-label {
@@ -345,7 +319,7 @@ header {
     cursor: pointer;
     border-radius: 5px 5px 0 0;
     flex: 1;
-    box-sizing: border-box; /* ボックスサイズを含める */
+    box-sizing: border-box;
 }
 
 .tab-wrap:after {
@@ -369,19 +343,6 @@ header {
     background-color: #fafafa;
 }
 
-.lang-switch {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 14px;
-  opacity: 0.85;
-}
-.lang-switch label {
-  margin-left: 8px;
-  cursor: pointer;
-}
-
-/* アクティブなタブ */
 .tab-switch:checked + .tab-label {
     background: DeepSkyBlue;
 }
@@ -395,20 +356,14 @@ header {
     box-shadow: 0 0 3px rgba(0,0,0,.2);
 }
 
-/* ラジオボタン非表示 */
+/* Hide radio buttons */
 .tab-switch {
     display: none;
 }
 
-body.mode-c .something {
-  opacity: 0.8;
-}
-
-#save-button {
-  display: none;
-
-}
-
+/* ================================== */
+/*          MISC / ICONS             */
+/* ================================== */
 .twitter-icon {
     width: 30px;
     height: 30px;
@@ -426,40 +381,42 @@ body.mode-c .something {
     font-size: 10px;
     text-align: right;
     width: 700px;
-    padding: 3px; /* 幅を広くするためのパディング */
+    padding: 3px;
 }
 
-/* スマホの縦画面表示に対応 768px */
+.lang-switch {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+.lang-switch label {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* ================================== */
+/*          RESPONSIVE               */
+/* ================================== */
 @media only screen and (max-width: 932px) {
     .container {
-        grid-template-columns: repeat(11, minmax(100px, 1fr)); /* 各列を100px固定 */
-        overflow-x: auto; /* 横スクロールを有効化 */
-        justify-content: start; /* スクロール位置を左に固定 */
-    }
-
-    .container {
+        grid-template-columns: repeat(11, minmax(100px, 1fr));
+        overflow-x: auto;
+        justify-content: start;
         padding: 10px 5px 5px 5px;
     }
-    
-    /*
-    .cell {
-    width: 100%;
-    height: auto; /* 高さを自動調整 */
-    border-radius: 5px; /* 角を少し丸める */
-    }
-    */
-    
+
     .tabs {
-        flex-direction: column; /* タブを縦並びに */
+        flex-direction: column;
     }
 
     h1 {
-        font-size: 20px; /* タイトルのフォントサイズを縮小 */
+        font-size: 20px;
     }
 
-    
     #save-button {
-        padding: 10px 40px; /* ボタンのサイズを縮小 */
+        padding: 10px 40px;
         font-size: 14px;
-}
+    }
 }
