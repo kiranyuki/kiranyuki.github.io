@@ -64,7 +64,7 @@ const imageData = [
     { src: 'raito.png', category: 'yumeneo' },
 
     { src: 'ryo.png', category: 'lvsk' },
-    { src: 'etsuya1.png', category: 'lvsk' },
+    { src: 'etsuya1.PNG', category: 'lvsk' },
     { src: 'taro.png', category: 'lvsk' },
     { src: 'hayate1.png', category: 'lvsk' },
     { src: 'uto1.png', category: 'lvsk' },
