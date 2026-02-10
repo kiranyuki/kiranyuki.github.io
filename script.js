@@ -298,17 +298,17 @@ function loadImages() {
         }
 
         const columnMapping = {
-            'svpt': [0, 12, 22],
-            'yumeneo': [1, 13, 23],
-            'ptgs': [2, 14, 24],
-            'lvsk': [3, 15, 25],
-            'xpia': [4, 16, 26],
-            'und': [5, 16, 27],
-            'dxu': [6, 17, 28],
-            'kiki': [7, 18, 29],
-            'lvls': [8, 19, 30],
-            'astral': [9, 20, 31],
-            'scandoll': [10, 21, 32],
+            'svpt': [0],
+            'yumeneo': [1],
+            'ptgs': [2],
+            'lvsk': [3],
+            'xpia': [4],
+            'und': [5],
+            'dxu': [6],
+            'kiki': [7],
+            'lvls': [8],
+            'astral': [9],
+            'scandoll': [10],
         };
 
         const positions = columnMapping[category] || [];
@@ -400,17 +400,17 @@ function loadImages() {
 
     function updateImageNumbers(tabCategory) {
         const columnMapping = {
-            'svpt': [0, 12, 22],
-            'yumeneo': [1, 13, 23],
-            'ptgs': [2, 14, 24],
-            'lvsk': [3, 15, 25],
-            'xpia': [4, 16, 26],
-            'und': [5, 16, 27],
-            'dxu': [6, 17, 28],
-            'kiki': [7, 18, 29],
-            'lvls': [8, 19, 30],
-            'astral': [9, 20, 31],
-            'scandoll': [10, 21, 32],
+            'svpt': [0],
+            'yumeneo': [1],
+            'ptgs': [2],
+            'lvsk': [3],
+            'xpia': [4],
+            'und': [5],
+            'dxu': [6],
+            'kiki': [7],
+            'lvls': [8],
+            'astral': [9],
+            'scandoll': [10],
         };
 
         const selectedCategory = tabSelections[tabCategory] || [];
@@ -424,17 +424,17 @@ function loadImages() {
 
     function repositionImages(tabCategory) {
         const columnMapping = {
-            'svpt': [0, 12, 22],
-            'yumeneo': [1, 13, 23],
-            'ptgs': [2, 14, 24],
-            'lvsk': [3, 15, 25],
-            'xpia': [4, 16, 26],
-            'und': [5, 16, 27],
-            'dxu': [6, 17, 28],
-            'kiki': [7, 18, 29],
-            'lvls': [8, 19, 30],
-            'astral': [9, 20, 31],
-            'scandoll': [10, 21, 32],
+            'svpt': [0],
+            'yumeneo': [1],
+            'ptgs': [2],
+            'lvsk': [3],
+            'xpia': [4],
+            'und': [5],
+            'dxu': [6],
+            'kiki': [7],
+            'lvls': [8],
+            'astral': [9],
+            'scandoll': [10],
         };
 
         const selectedCategory = tabSelections[tabCategory] || [];
@@ -465,17 +465,17 @@ function loadImages() {
     function restoreSelectionState(category) {
         const selectedCategory = tabSelections[category] || [];
         const columnMapping = {
-            'svpt': [0, 12, 22],
-            'yumeneo': [1, 13, 23],
-            'ptgs': [2, 14, 24],
-            'lvsk': [3, 15, 25],
-            'xpia': [4, 16, 26],
-            'und': [5, 16, 27],
-            'dxu': [6, 17, 28],
-            'kiki': [7, 18, 29],
-            'lvls': [8, 19, 30],
-            'astral': [9, 20, 31],
-            'scandoll': [10, 21, 32],
+             'svpt': [0],
+            'yumeneo': [1],
+            'ptgs': [2],
+            'lvsk': [3],
+            'xpia': [4],
+            'und': [5],
+            'dxu': [6],
+            'kiki': [7],
+            'lvls': [8],
+            'astral': [9],
+            'scandoll': [10],
         };
         const positions = columnMapping[category] || [];
 
