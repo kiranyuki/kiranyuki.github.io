@@ -205,6 +205,41 @@ header {
     left: 0;
 }
 
+/* ===== GRID LAYOUT ===== */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr); /* 11 columns = your headers */
+  gap: 8px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+/* headers (logos) */
+#grid .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* grid cells */
+#grid .cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* images inside grid */
+#grid img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .image-list {
     display: flex;
     flex-wrap: wrap;
