@@ -1,4 +1,4 @@
-const imageFolder = 'chara/';
+const imageFolder = 'github/';
 const imageData = [
     { src: 'amato.png', category: 'xpia' },
     { src: 'tsubaki.png', category: 'xpia' },
@@ -102,38 +102,13 @@ const MAX_SELECTION = 1;
 const SELECTED_LABEL = '☑';
 
 //------------------------------------------------------------------------------------------------
-const toggleButton = document.getElementById('toggle-button');
-const sidebar = document.getElementById('sidebar');
-const parentNode = document.querySelector('.parent-node');
-const childNodes = document.querySelector('.child-nodes');
-
-// 初期状態でサイドバーを隠す
-sidebar.classList.add('hidden');
-toggleButton.setAttribute('aria-expanded', false);
-toggleButton.setAttribute('aria-label', 'メニューを開く');
-
-toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('hidden'); // hiddenクラスを切り替え
-    const isExpanded = !sidebar.classList.contains('hidden');
-    toggleButton.setAttribute('aria-expanded', isExpanded);
-    toggleButton.setAttribute('aria-label', isExpanded ? 'メニューを閉じる' : 'メニューを開く');
-});
-
-parentNode.addEventListener('click', (event) => {
-    event.preventDefault(); // デフォルトのリンク動作を防止
-    childNodes.classList.toggle('active'); // 子ノードの表示・非表示を切り替え
-    const isActive = childNodes.classList.contains('active');
-    parentNode.textContent = `${isActive ? '▼' : '▶'} 推しキャラランキング`; // テキストを更新
-});
-
-//------------------------------------------------------------------------------------------------
 
 // タブごとの選択状態を管理するためのオブジェクト
 const tabSelections = {};
 
 const i18n = {
   ja: {
-    title: "RINDO推しランキング",
+    title: "RINDO推しを選ぶ",
     save: "Save Image",
     default: "デフォルト",
     hideLeft: "左バー消滅",
@@ -151,7 +126,7 @@ const i18n = {
     scandoll: "すきゃんどーる",
   },
   en: {
-    title: "Rindo Entertainment Oshis
+    title: "Rindo Oshi Selector
     save: "Save Image",
     default: "Default",
     hideLeft: "Hide Left Bar",
