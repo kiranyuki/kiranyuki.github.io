@@ -551,7 +551,6 @@ function saveImage() {
 
           if (nowMs - last >= COOLDOWN_MS) {
             try {
-              await incrementBakatareCount(filenameSrc);
               localStorage.setItem(key, String(nowMs));
             } catch (e) {
               console.warn('ばかたれ集計: 失敗（保存は続行）', e);
