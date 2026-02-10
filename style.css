@@ -152,17 +152,6 @@ h1 {
 /* ================================== */
 /*          GRID & CELLS             */
 /* ================================== */
-.container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 100px;
-    gap: 8px;
-    justify-content: center;
-    margin: 10px auto;
-    padding: 10px 20px 5px 20px;
-    max-width: 700px;
-}
-
 /* Item container stacks logo above box */
 .item {
     display: flex;
@@ -194,14 +183,12 @@ h1 {
 /* For larger grid */
 #grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 100px;
-    gap: 12px;
+    grid-template-columns: repeat(5, 100px);
+    gap: 20px;
+    justify-content: center;
     max-width: 1000px;
     margin: 20px auto;
-    justify-items: center;
     background-color: transparent;
-    overflow: hidden;
 }
 
 /* Logo row for multiple logos */
@@ -399,8 +386,8 @@ h1 {
 /* ================================== */
 /*          RESPONSIVE               */
 /* ================================== */
-@media only screen and (max-width: 932px) {
-    .container {
+@media (max-width: 932px) {
+    #grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         overflow-x: auto;
         justify-content: start;
