@@ -455,12 +455,4 @@ body.mode-c .something {
         padding: 10px 40px; /* ボタンのサイズを縮小 */
         font-size: 14px;
 }
-    @media only screen and (max-width: 932px) {
-    .container {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-        gap: 8px;
-        overflow-x: auto;
-        justify-content: start;
-    }
-}
 }
