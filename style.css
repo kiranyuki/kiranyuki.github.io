@@ -137,7 +137,9 @@ h1 {
 .tabs {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    gap: 8px;
+    margin: 15px auto 10px;
+    flex-wrap: nowrap;
 }
 
 .tab {
