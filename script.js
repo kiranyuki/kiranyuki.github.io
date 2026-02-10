@@ -1,6 +1,3 @@
-
-import { incrementBakatareCount } from './bakatareCount.js';
-
 const imageFolder = 'chara/';
 const imageData = [
     { src: 'amato.png', category: 'xpia' },
