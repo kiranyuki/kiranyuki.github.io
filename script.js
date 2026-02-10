@@ -1,4 +1,4 @@
-const imageFolder = 'chara/';
+const imageFolder = 'github/';
 const imageData = [
     { src: 'amato.png', category: 'xpia' },
     { src: 'tsubaki.png', category: 'xpia' },
