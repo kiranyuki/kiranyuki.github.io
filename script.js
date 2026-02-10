@@ -52,7 +52,7 @@ const imageData = [
     { src: 'ibuki.png', category: 'lvls' },
     { src: 'yuma.png', category: 'lvls' },
     { src: 'yutaka.png', category: 'lvls' },
-    { src: 'taro.png', category: 'lvls' },
+    { src: 'taro1.png', category: 'lvls' },
 
     { src: 'tsubaki.png', category: 'yumeneo' },
     { src: 'name.png', category: 'yumeneo' },
